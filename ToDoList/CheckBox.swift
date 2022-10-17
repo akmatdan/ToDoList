@@ -44,7 +44,7 @@ class CheckBox: UIControl {
         imageView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         
         imageView.image =  image
-        imageView.contentMode = .scaleAspectFit
+        
         
         self.imageView = imageView
         

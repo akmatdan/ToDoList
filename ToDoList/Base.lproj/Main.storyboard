@@ -43,28 +43,37 @@
                                 <rect key="frame" x="0.0" y="109" width="414" height="753"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="checked cell" id="7hx-Zk-sBk" customClass="CheckTableViewCell" customModule="ToDoList" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="41.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7hx-Zk-sBk" id="uuE-P9-irM">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="41.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vlx-Fw-0oj" customClass="CheckBox" customModule="ToDoList" customModuleProvider="target">
-                                                    <rect key="frame" x="35" y="4" width="35" height="35"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQQ-Oo-0Ld">
+                                                    <rect key="frame" x="69" y="11" width="325" height="19.5"/>
+                                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vlx-Fw-0oj" customClass="CheckBox" customModule="ToDoList" customModuleProvider="target">
+                                                    <rect key="frame" x="34" y="5" width="30" height="32"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <connections>
                                                         <action selector="checked:" destination="7hx-Zk-sBk" eventType="valueChanged" id="jhA-JY-Sfx"/>
                                                     </connections>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQQ-Oo-0Ld">
-                                                    <rect key="frame" x="78" y="13" width="316" height="17"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="14"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Vlx-Fw-0oj" secondAttribute="bottom" constant="5" id="6mT-yN-6Ov"/>
+                                                <constraint firstItem="Vlx-Fw-0oj" firstAttribute="leading" secondItem="uuE-P9-irM" secondAttribute="leading" constant="34" id="7gQ-S2-TRo"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="NQQ-Oo-0Ld" secondAttribute="trailing" id="Asj-gj-xai"/>
+                                                <constraint firstItem="NQQ-Oo-0Ld" firstAttribute="leading" secondItem="Vlx-Fw-0oj" secondAttribute="trailing" constant="5" id="EOc-1b-9d9"/>
+                                                <constraint firstItem="Vlx-Fw-0oj" firstAttribute="centerY" secondItem="uuE-P9-irM" secondAttribute="centerY" id="Umh-5c-eJn"/>
+                                                <constraint firstItem="Vlx-Fw-0oj" firstAttribute="top" secondItem="uuE-P9-irM" secondAttribute="top" constant="5" id="bRE-z1-RX4"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="NQQ-Oo-0Ld" secondAttribute="bottom" id="e89-bT-x4R"/>
+                                                <constraint firstItem="NQQ-Oo-0Ld" firstAttribute="top" secondItem="uuE-P9-irM" secondAttribute="topMargin" id="okz-mY-NaI"/>
+                                                <constraint firstItem="Vlx-Fw-0oj" firstAttribute="width" secondItem="uuE-P9-irM" secondAttribute="height" multiplier="33:46" id="u17-gP-QZC"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="checkBox" destination="Vlx-Fw-0oj" id="s7j-kX-TP7"/>
