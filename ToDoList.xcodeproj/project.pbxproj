@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E32D66E828FD0294005DBFE6 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32D66E728FD0294005DBFE6 /* ToDo.swift */; };
+		E32D66EB28FD2B7D005DBFE6 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32D66EA28FD2B7D005DBFE6 /* CheckBox.swift */; };
+		E32D66EF28FD4903005DBFE6 /* CheckTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32D66EE28FD4903005DBFE6 /* CheckTableViewCell.swift */; };
 		E37C0DFF28FD01AF00F6D9BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37C0DFE28FD01AF00F6D9BB /* AppDelegate.swift */; };
 		E37C0E0128FD01AF00F6D9BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37C0E0028FD01AF00F6D9BB /* SceneDelegate.swift */; };
 		E37C0E0328FD01AF00F6D9BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37C0E0228FD01AF00F6D9BB /* ViewController.swift */; };
@@ -18,6 +20,8 @@
 
 /* Begin PBXFileReference section */
 		E32D66E728FD0294005DBFE6 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
+		E32D66EA28FD2B7D005DBFE6 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		E32D66EE28FD4903005DBFE6 /* CheckTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckTableViewCell.swift; sourceTree = "<group>"; };
 		E37C0DFB28FD01AF00F6D9BB /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E37C0DFE28FD01AF00F6D9BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E37C0E0028FD01AF00F6D9BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +74,8 @@
 				E37C0DFE28FD01AF00F6D9BB /* AppDelegate.swift */,
 				E37C0E0028FD01AF00F6D9BB /* SceneDelegate.swift */,
 				E37C0E0228FD01AF00F6D9BB /* ViewController.swift */,
+				E32D66EA28FD2B7D005DBFE6 /* CheckBox.swift */,
+				E32D66EE28FD4903005DBFE6 /* CheckTableViewCell.swift */,
 				E37C0E0428FD01AF00F6D9BB /* Main.storyboard */,
 				E37C0E0728FD01B300F6D9BB /* Assets.xcassets */,
 				E37C0E0928FD01B300F6D9BB /* LaunchScreen.storyboard */,
@@ -149,10 +155,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E32D66EF28FD4903005DBFE6 /* CheckTableViewCell.swift in Sources */,
 				E37C0E0328FD01AF00F6D9BB /* ViewController.swift in Sources */,
 				E37C0DFF28FD01AF00F6D9BB /* AppDelegate.swift in Sources */,
 				E37C0E0128FD01AF00F6D9BB /* SceneDelegate.swift in Sources */,
 				E32D66E828FD0294005DBFE6 /* ToDo.swift in Sources */,
+				E32D66EB28FD2B7D005DBFE6 /* CheckBox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -28,9 +28,12 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "checked cell", for: indexPath) as! CheckTableViewCell
+        
         let todo = todos[indexPath.row]
-        let cell = UITableViewCell()
-        cell.textLabel?.text = todo.title
+        
+        cell.set(title: todo.title, checked: todo.isComplete)
+        
         return cell
     }
 }
