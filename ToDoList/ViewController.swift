@@ -21,6 +21,16 @@ class ViewController: UIViewController {
         tableView.isEditing = !tableView.isEditing
     }
     
+    @IBSegueAction func todoViewController(_ coder: NSCoder) -> TodoViewController? {
+        let vc = TodoViewController(coder: coder)
+        
+        if let indexPath = tableView.indexPathForSelectedRow {
+            let todo = todos[indexPath.row]
+            vc?.todo = todo
+        }
+        
+        return vc
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

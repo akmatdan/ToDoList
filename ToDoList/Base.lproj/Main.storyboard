@@ -30,6 +30,9 @@
                                     <imageReference key="image" image="plus" catalog="system" symbolScale="large"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="23" scale="large"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="TrI-mb-Y6a" kind="show" id="Ubi-WP-gsy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPd-15-0Ju">
                                 <rect key="frame" x="20" y="59" width="59.5" height="41.5"/>
@@ -81,6 +84,7 @@
                                         <connections>
                                             <outlet property="checkBox" destination="Vlx-Fw-0oj" id="s7j-kX-TP7"/>
                                             <outlet property="label" destination="NQQ-Oo-0Ld" id="G82-Mt-b6A"/>
+                                            <segue destination="TrI-mb-Y6a" kind="show" destinationCreationSelector="todoViewController:" id="qtb-As-ZMb"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -113,8 +117,60 @@
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
         </scene>
+        <!--Todo View Controller-->
+        <scene sceneID="PYl-7u-dGY">
+            <objects>
+                <viewController id="TrI-mb-Y6a" customClass="TodoViewController" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Z9-sf-1mE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDQ-NT-xN4">
+                                <rect key="frame" x="339" y="20" width="55" height="42"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="arrow.down.doc" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="plain" title="">
+                                    <imageReference key="image" image="arrow.down.doc" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="23" scale="large"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="save:" destination="TrI-mb-Y6a" eventType="touchUpInside" id="6Zu-7R-sXJ"/>
+                                    <action selector="save:" destination="fwH-6S-XBJ" eventType="touchUpInside" id="YAS-E9-GgV"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f0U-fB-ddy">
+                                <rect key="frame" x="20" y="102" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ljc-HL-8iO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ljc-HL-8iO" firstAttribute="trailing" secondItem="aDQ-NT-xN4" secondAttribute="trailing" constant="20" id="5Ye-Xm-vbP"/>
+                            <constraint firstItem="ljc-HL-8iO" firstAttribute="trailing" secondItem="f0U-fB-ddy" secondAttribute="trailing" constant="20" id="KzA-RX-NeS"/>
+                            <constraint firstItem="f0U-fB-ddy" firstAttribute="centerX" secondItem="ljc-HL-8iO" secondAttribute="centerX" id="NV8-gV-Qeq"/>
+                            <constraint firstItem="f0U-fB-ddy" firstAttribute="top" secondItem="ljc-HL-8iO" secondAttribute="top" constant="102" id="OW1-W3-RpN"/>
+                            <constraint firstItem="aDQ-NT-xN4" firstAttribute="top" secondItem="ljc-HL-8iO" secondAttribute="top" constant="20" id="iZM-gI-MdS"/>
+                            <constraint firstItem="f0U-fB-ddy" firstAttribute="leading" secondItem="ljc-HL-8iO" secondAttribute="leading" constant="20" id="paB-KT-dwr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nLD-5R-vP1"/>
+                    <connections>
+                        <outlet property="textfield" destination="f0U-fB-ddy" id="7v6-4y-0tm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XQL-t4-3Pu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="fwH-6S-XBJ" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="755" y="94"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="qtb-As-ZMb"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <image name="arrow.down.doc" catalog="system" width="115" height="128"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <systemColor name="systemBackgroundColor">
