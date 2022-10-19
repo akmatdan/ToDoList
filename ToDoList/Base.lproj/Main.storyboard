@@ -38,6 +38,9 @@
                                     <imageReference key="image" image="square.and.pencil" catalog="system" symbolScale="large"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="23" scale="large"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="startEditing:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yU3-lV-xtk"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ssx-fS-x3u">
                                 <rect key="frame" x="0.0" y="109" width="414" height="753"/>
@@ -56,7 +59,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vlx-Fw-0oj" customClass="CheckBox" customModule="ToDoList" customModuleProvider="target">
-                                                    <rect key="frame" x="34" y="5" width="30" height="32"/>
+                                                    <rect key="frame" x="34" y="5" width="30" height="31.5"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <connections>
                                                         <action selector="checked:" destination="7hx-Zk-sBk" eventType="valueChanged" id="jhA-JY-Sfx"/>
@@ -83,6 +86,7 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="Nkg-xc-9cx"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="VVC-Gj-gZ4"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -101,6 +105,9 @@
                             <constraint firstItem="hq4-eZ-u8j" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mZ4-Gh-nNL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="Ssx-fS-x3u" id="jRy-vb-kuF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
