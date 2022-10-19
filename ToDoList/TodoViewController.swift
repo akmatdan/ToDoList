@@ -7,18 +7,29 @@
 
 import UIKit
 
+protocol TodoViewControllerDelegate: AnyObject {
+    func todoViewController(_ vc: TodoViewController, didSaveToDo: ToDo)
+}
+
 class TodoViewController: UIViewController {
 
-    @IBOutlet weak var textfield: UITextField!
+    
+    @IBOutlet weak var textFieldTitle: UITextField!
+    @IBOutlet weak var textFieldDescription: UITextField!
     
     var todo: ToDo?
+    
+    weak var delegate: TodoViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        textfield.text = todo?.title
+        textFieldTitle.text = todo?.title
+//        textFieldDescription.text = todo?.description
     }
 
     @IBAction func save(_ sender: Any) {
+        let todo = ToDo(title: textFieldTitle.text!, description: textFieldDescription.text!)
+        delegate?.todoViewController(self, didSaveToDo: todo)
     }
 }

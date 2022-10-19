@@ -31,7 +31,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="23" scale="large"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="TrI-mb-Y6a" kind="show" id="Ubi-WP-gsy"/>
+                                    <segue destination="TrI-mb-Y6a" kind="show" id="h8Y-gk-Vns"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPd-15-0Ju">
@@ -84,7 +84,7 @@
                                         <connections>
                                             <outlet property="checkBox" destination="Vlx-Fw-0oj" id="s7j-kX-TP7"/>
                                             <outlet property="label" destination="NQQ-Oo-0Ld" id="G82-Mt-b6A"/>
-                                            <segue destination="TrI-mb-Y6a" kind="show" destinationCreationSelector="todoViewController:" id="qtb-As-ZMb"/>
+                                            <segue destination="TrI-mb-Y6a" kind="show" destinationCreationSelector="todoViewController:" id="x6G-0a-oOv"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -139,24 +139,51 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f0U-fB-ddy">
-                                <rect key="frame" x="20" y="102" width="374" height="34"/>
+                                <rect key="frame" x="20" y="101" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Io2-Gd-VC9">
+                                <rect key="frame" x="20" y="72" width="33" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDr-x3-E8y">
+                                <rect key="frame" x="20" y="155" width="88" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ktg-0u-I2X">
+                                <rect key="frame" x="20" y="184" width="374" height="34"/>
+                                <nil key="textColor"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ljc-HL-8iO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Io2-Gd-VC9" firstAttribute="leading" secondItem="f0U-fB-ddy" secondAttribute="leading" id="41k-9h-ksR"/>
                             <constraint firstItem="ljc-HL-8iO" firstAttribute="trailing" secondItem="aDQ-NT-xN4" secondAttribute="trailing" constant="20" id="5Ye-Xm-vbP"/>
+                            <constraint firstItem="Io2-Gd-VC9" firstAttribute="leading" secondItem="ljc-HL-8iO" secondAttribute="leading" constant="20" id="6On-9V-aLc"/>
+                            <constraint firstItem="WDr-x3-E8y" firstAttribute="top" secondItem="f0U-fB-ddy" secondAttribute="bottom" constant="20" id="EYF-rw-vOd"/>
+                            <constraint firstItem="WDr-x3-E8y" firstAttribute="leading" secondItem="Ktg-0u-I2X" secondAttribute="leading" id="GKk-dg-teZ"/>
                             <constraint firstItem="ljc-HL-8iO" firstAttribute="trailing" secondItem="f0U-fB-ddy" secondAttribute="trailing" constant="20" id="KzA-RX-NeS"/>
                             <constraint firstItem="f0U-fB-ddy" firstAttribute="centerX" secondItem="ljc-HL-8iO" secondAttribute="centerX" id="NV8-gV-Qeq"/>
-                            <constraint firstItem="f0U-fB-ddy" firstAttribute="top" secondItem="ljc-HL-8iO" secondAttribute="top" constant="102" id="OW1-W3-RpN"/>
+                            <constraint firstItem="Io2-Gd-VC9" firstAttribute="top" secondItem="aDQ-NT-xN4" secondAttribute="bottom" constant="10" id="Qax-Bl-thX"/>
+                            <constraint firstItem="Ktg-0u-I2X" firstAttribute="top" secondItem="WDr-x3-E8y" secondAttribute="bottom" constant="8" symbolic="YES" id="Tvz-MI-82h"/>
+                            <constraint firstItem="f0U-fB-ddy" firstAttribute="top" secondItem="Io2-Gd-VC9" secondAttribute="bottom" constant="8" symbolic="YES" id="dJw-8h-D1P"/>
+                            <constraint firstItem="Ktg-0u-I2X" firstAttribute="leading" secondItem="ljc-HL-8iO" secondAttribute="leading" constant="20" id="fIP-ky-4fh"/>
                             <constraint firstItem="aDQ-NT-xN4" firstAttribute="top" secondItem="ljc-HL-8iO" secondAttribute="top" constant="20" id="iZM-gI-MdS"/>
+                            <constraint firstItem="ljc-HL-8iO" firstAttribute="trailing" secondItem="Ktg-0u-I2X" secondAttribute="trailing" constant="20" id="iyy-gH-SmK"/>
                             <constraint firstItem="f0U-fB-ddy" firstAttribute="leading" secondItem="ljc-HL-8iO" secondAttribute="leading" constant="20" id="paB-KT-dwr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nLD-5R-vP1"/>
                     <connections>
+                        <outlet property="textFieldDescription" destination="Ktg-0u-I2X" id="4Pm-nd-u2F"/>
+                        <outlet property="textFieldTitle" destination="f0U-fB-ddy" id="ORr-6k-vuj"/>
                         <outlet property="textfield" destination="f0U-fB-ddy" id="7v6-4y-0tm"/>
                     </connections>
                 </viewController>
@@ -167,7 +194,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="qtb-As-ZMb"/>
+        <segue reference="h8Y-gk-Vns"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.down.doc" catalog="system" width="115" height="128"/>

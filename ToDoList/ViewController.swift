@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     var todos = [
         ToDo(title: "Make vanilla pudding.", description: "Watch youtube video and follow guidance.", isComplete: false),
         ToDo(title: "Put pudding in a mayo jar.", description: "lore ipsume...", isComplete: false),
@@ -29,6 +29,8 @@ class ViewController: UIViewController {
             vc?.todo = todo
         }
         
+        vc?.delegate = self
+        
         return vc
     }
     
@@ -37,23 +39,19 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: CheckTableViewCellDelegate {
-    
-    func checkTableViewCell(_ cell: CheckTableViewCell, didChagneCheckedState checked: Bool) {
-        guard let indexPath = tableView.indexPath(for: cell) else {
-            return
-        }
-        let todo = todos[indexPath.row]
-        let newTodo = ToDo(title: todo.title, description: todo.description, isComplete: todo.isComplete)
-        
-        todos[indexPath.row] = newTodo
-    }
-}
-
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
         let action = UIContextualAction(style: .normal, title: "Complete") { action, view, complete in
+            
+            let todo = self.todos[indexPath.row]
+            self.todos[indexPath.row] = todo
+
+            let cell = tableView.cellForRow(at: indexPath) as! CheckTableViewCell
+            cell.set(checked: todo.isComplete)
+
+            complete(true)
+
             print("complete")
         }
         
@@ -93,5 +91,38 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         let todo = todos.remove(at: sourceIndexPath.row)
         todos.insert(todo, at: destinationIndexPath.row)
+    }
+}
+
+extension ViewController: CheckTableViewCellDelegate {
+    
+    func checkTableViewCell(_ cell: CheckTableViewCell, didChagneCheckedState checked: Bool) {
+        guard let indexPath = tableView.indexPath(for: cell) else {
+            return
+        }
+        let todo = todos[indexPath.row]
+        let newTodo = ToDo(title: todo.title, description: todo.description, isComplete: todo.isComplete)
+        
+        todos[indexPath.row] = newTodo
+    }
+}
+
+extension ViewController: TodoViewControllerDelegate {
+  
+    func todoViewController(_ vc: TodoViewController, didSaveToDo todo: ToDo) {
+
+        dismiss(animated: true) {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                // update
+                self.todos[indexPath.row] = todo
+                self.tableView.reloadRows(at: [indexPath], with: .none)
+            } else {
+                // create
+                self.todos.append(todo)
+                self.tableView.insertRows(at: [IndexPath(row: self.todos.count-1, section: 0)], with: .automatic)
+            }
+            
+            self.dismiss(animated: true, completion: nil)
+        }
     }
 }
