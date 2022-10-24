@@ -44,7 +44,7 @@ extension ViewController: UITableViewDelegate {
         
         let action = UIContextualAction(style: .normal, title: "Complete") { action, view, complete in
             
-            let todo = self.todos[indexPath.row]
+            let todo = self.todos[indexPath.row].completeToggle()
             self.todos[indexPath.row] = todo
 
             let cell = tableView.cellForRow(at: indexPath) as! CheckTableViewCell
