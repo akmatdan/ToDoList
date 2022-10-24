@@ -80,8 +80,8 @@
 				E32D66EE28FD4903005DBFE6 /* CheckTableViewCell.swift */,
 				E3B864A8290034650099B4D1 /* TodoViewController.swift */,
 				E37C0E0428FD01AF00F6D9BB /* Main.storyboard */,
-				E37C0E0728FD01B300F6D9BB /* Assets.xcassets */,
 				E37C0E0928FD01B300F6D9BB /* LaunchScreen.storyboard */,
+				E37C0E0728FD01B300F6D9BB /* Assets.xcassets */,
 				E37C0E0C28FD01B300F6D9BB /* Info.plist */,
 			);
 			path = ToDoList;

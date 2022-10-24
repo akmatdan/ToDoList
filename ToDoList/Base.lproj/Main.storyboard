@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To Dos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hq4-eZ-u8j">
-                                <rect key="frame" x="157.5" y="59" width="99.5" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ToDos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hq4-eZ-u8j">
+                                <rect key="frame" x="161" y="59" width="92" height="35"/>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -101,8 +101,10 @@
                             <constraint firstItem="iPd-15-0Ju" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="6kr-0c-aAp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h9H-OV-UNo" secondAttribute="trailing" constant="20" id="BjX-hI-6WF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ssx-fS-x3u" secondAttribute="bottom" id="G32-Os-MPt"/>
+                            <constraint firstItem="hq4-eZ-u8j" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iPd-15-0Ju" secondAttribute="trailing" constant="8" symbolic="YES" id="IDz-Tb-oHJ"/>
                             <constraint firstItem="Ssx-fS-x3u" firstAttribute="top" secondItem="hq4-eZ-u8j" secondAttribute="bottom" constant="15" id="RtG-uy-LW8"/>
                             <constraint firstItem="hq4-eZ-u8j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="Z13-GJ-wZJ"/>
+                            <constraint firstItem="h9H-OV-UNo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hq4-eZ-u8j" secondAttribute="trailing" constant="8" symbolic="YES" id="e17-GO-69y"/>
                             <constraint firstItem="iPd-15-0Ju" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="jhX-yM-hqf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ssx-fS-x3u" secondAttribute="trailing" id="jqI-s4-3kp"/>
                             <constraint firstItem="h9H-OV-UNo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="lxa-W8-Vcr"/>
