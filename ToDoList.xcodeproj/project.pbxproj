@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E32D66E828FD0294005DBFE6 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32D66E728FD0294005DBFE6 /* ToDo.swift */; };
+		E32D66E828FD0294005DBFE6 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32D66E728FD0294005DBFE6 /* Todo.swift */; };
 		E32D66EB28FD2B7D005DBFE6 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32D66EA28FD2B7D005DBFE6 /* CheckBox.swift */; };
 		E32D66EF28FD4903005DBFE6 /* CheckTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32D66EE28FD4903005DBFE6 /* CheckTableViewCell.swift */; };
 		E37C0DFF28FD01AF00F6D9BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37C0DFE28FD01AF00F6D9BB /* AppDelegate.swift */; };
@@ -20,7 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E32D66E728FD0294005DBFE6 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
+		E32D66E728FD0294005DBFE6 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		E32D66EA28FD2B7D005DBFE6 /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		E32D66EE28FD4903005DBFE6 /* CheckTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckTableViewCell.swift; sourceTree = "<group>"; };
 		E37C0DFB28FD01AF00F6D9BB /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,7 +48,7 @@
 		E32D66E928FD029D005DBFE6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E32D66E728FD0294005DBFE6 /* ToDo.swift */,
+				E32D66E728FD0294005DBFE6 /* Todo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -163,7 +163,7 @@
 				E3B864A9290034650099B4D1 /* TodoViewController.swift in Sources */,
 				E37C0DFF28FD01AF00F6D9BB /* AppDelegate.swift in Sources */,
 				E37C0E0128FD01AF00F6D9BB /* SceneDelegate.swift in Sources */,
-				E32D66E828FD0294005DBFE6 /* ToDo.swift in Sources */,
+				E32D66E828FD0294005DBFE6 /* Todo.swift in Sources */,
 				E32D66EB28FD2B7D005DBFE6 /* CheckBox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

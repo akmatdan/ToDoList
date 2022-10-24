@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ToDo {
+struct Todo {
     let title: String
     let description: String
     let isComplete: Bool
@@ -18,7 +18,7 @@ struct ToDo {
         self.isComplete = isComplete
     }
     
-    func completeToggle() -> ToDo{
-        return ToDo(title: title, description: description, isComplete: !isComplete)
+    func completeToggle() -> Todo{
+        return Todo(title: title, description: description, isComplete: !isComplete)
     }
 }

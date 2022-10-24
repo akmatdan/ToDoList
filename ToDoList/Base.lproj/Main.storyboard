@@ -31,7 +31,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="23" scale="large"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="TrI-mb-Y6a" kind="show" id="h8Y-gk-Vns"/>
+                                    <segue destination="TrI-mb-Y6a" kind="show" destinationCreationSelector="todoViewController:" id="S7e-fu-SDO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPd-15-0Ju">
@@ -84,7 +84,7 @@
                                         <connections>
                                             <outlet property="checkBox" destination="Vlx-Fw-0oj" id="s7j-kX-TP7"/>
                                             <outlet property="label" destination="NQQ-Oo-0Ld" id="G82-Mt-b6A"/>
-                                            <segue destination="TrI-mb-Y6a" kind="show" destinationCreationSelector="todoViewController:" id="x6G-0a-oOv"/>
+                                            <segue destination="TrI-mb-Y6a" kind="show" destinationCreationSelector="todoViewController:" id="6zt-pt-kF7"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -157,7 +157,7 @@
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ktg-0u-I2X">
                                 <rect key="frame" x="20" y="184" width="374" height="34"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
@@ -184,7 +184,6 @@
                     <connections>
                         <outlet property="textFieldDescription" destination="Ktg-0u-I2X" id="4Pm-nd-u2F"/>
                         <outlet property="textFieldTitle" destination="f0U-fB-ddy" id="ORr-6k-vuj"/>
-                        <outlet property="textfield" destination="f0U-fB-ddy" id="7v6-4y-0tm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XQL-t4-3Pu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -194,7 +193,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="h8Y-gk-Vns"/>
+        <segue reference="6zt-pt-kF7"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.down.doc" catalog="system" width="115" height="128"/>

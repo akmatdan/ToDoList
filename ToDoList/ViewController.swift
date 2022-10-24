@@ -10,10 +10,14 @@ import UIKit
 class ViewController: UIViewController {
     
     var todos = [
-        ToDo(title: "Make vanilla pudding.", description: "Watch youtube video and follow guidance.", isComplete: false),
-        ToDo(title: "Put pudding in a mayo jar.", description: "lore ipsume...", isComplete: false),
-        ToDo(title: "Eat it in a public place.", description: "Mmm...", isComplete: false),
+        Todo(title: "Make vanilla pudding.", description: "Watch youtube video and follow guidance.", isComplete: false),
+        Todo(title: "Put pudding in a mayo jar.", description: "lore ipsume...", isComplete: false),
+        Todo(title: "Eat it in a public place.", description: "Mmm...", isComplete: false),
     ]
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -24,18 +28,14 @@ class ViewController: UIViewController {
     @IBSegueAction func todoViewController(_ coder: NSCoder) -> TodoViewController? {
         let vc = TodoViewController(coder: coder)
         
-        if let indexPath = tableView.indexPathForSelectedRow {
-            let todo = todos[indexPath.row]
+        if let indexpath = tableView.indexPathForSelectedRow {
+            let todo = todos[indexpath.row]
             vc?.todo = todo
         }
-        
         vc?.delegate = self
+        vc?.presentationController?.delegate = self
         
         return vc
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
     }
 }
 
@@ -101,7 +101,7 @@ extension ViewController: CheckTableViewCellDelegate {
             return
         }
         let todo = todos[indexPath.row]
-        let newTodo = ToDo(title: todo.title, description: todo.description, isComplete: todo.isComplete)
+        let newTodo = Todo(title: todo.title, description: todo.description, isComplete: todo.isComplete)
         
         todos[indexPath.row] = newTodo
     }
@@ -109,7 +109,7 @@ extension ViewController: CheckTableViewCellDelegate {
 
 extension ViewController: TodoViewControllerDelegate {
   
-    func todoViewController(_ vc: TodoViewController, didSaveToDo todo: ToDo) {
+    func todoViewController(_ vc: TodoViewController, didSaveToDo todo: Todo) {
 
         dismiss(animated: true) {
             if let indexPath = self.tableView.indexPathForSelectedRow {
@@ -121,8 +121,16 @@ extension ViewController: TodoViewControllerDelegate {
                 self.todos.append(todo)
                 self.tableView.insertRows(at: [IndexPath(row: self.todos.count-1, section: 0)], with: .automatic)
             }
-            
             self.dismiss(animated: true, completion: nil)
         }
     }
+}
+
+extension ViewController: UIAdaptivePresentationControllerDelegate {
+  
+  func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
+    if let indexPath = tableView.indexPathForSelectedRow {
+      tableView.deselectRow(at: indexPath, animated: true)
+    }
+  }
 }
