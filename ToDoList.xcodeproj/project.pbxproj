@@ -16,6 +16,7 @@
 		E37C0E0628FD01AF00F6D9BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E37C0E0428FD01AF00F6D9BB /* Main.storyboard */; };
 		E37C0E0828FD01B300F6D9BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E37C0E0728FD01B300F6D9BB /* Assets.xcassets */; };
 		E37C0E0B28FD01B300F6D9BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E37C0E0928FD01B300F6D9BB /* LaunchScreen.storyboard */; };
+		E3B4E0B3290BC22600AB7D52 /* StopWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B4E0B2290BC22600AB7D52 /* StopWatchViewController.swift */; };
 		E3B864A9290034650099B4D1 /* TodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B864A8290034650099B4D1 /* TodoViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		E37C0E0728FD01B300F6D9BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E37C0E0A28FD01B300F6D9BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E37C0E0C28FD01B300F6D9BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3B4E0B2290BC22600AB7D52 /* StopWatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchViewController.swift; sourceTree = "<group>"; };
 		E3B864A8290034650099B4D1 /* TodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +81,7 @@
 				E32D66EA28FD2B7D005DBFE6 /* CheckBox.swift */,
 				E32D66EE28FD4903005DBFE6 /* CheckTableViewCell.swift */,
 				E3B864A8290034650099B4D1 /* TodoViewController.swift */,
+				E3B4E0B2290BC22600AB7D52 /* StopWatchViewController.swift */,
 				E37C0E0428FD01AF00F6D9BB /* Main.storyboard */,
 				E37C0E0928FD01B300F6D9BB /* LaunchScreen.storyboard */,
 				E37C0E0728FD01B300F6D9BB /* Assets.xcassets */,
@@ -162,6 +165,7 @@
 				E37C0E0328FD01AF00F6D9BB /* ViewController.swift in Sources */,
 				E3B864A9290034650099B4D1 /* TodoViewController.swift in Sources */,
 				E37C0DFF28FD01AF00F6D9BB /* AppDelegate.swift in Sources */,
+				E3B4E0B3290BC22600AB7D52 /* StopWatchViewController.swift in Sources */,
 				E37C0E0128FD01AF00F6D9BB /* SceneDelegate.swift in Sources */,
 				E32D66E828FD0294005DBFE6 /* Todo.swift in Sources */,
 				E32D66EB28FD2B7D005DBFE6 /* CheckBox.swift in Sources */,
